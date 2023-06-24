@@ -1,7 +1,7 @@
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, url_for
 import json
 from datetime import datetime
 from bson import ObjectId
@@ -17,6 +17,13 @@ def dump_json(data):
 app = Flask(__name__)
 CLIENT = MongoClient(uri, server_api=ServerApi("1"))
 DB = CLIENT["fornear-v1"]
+
+
+@app.route("/system/routes")
+def get_routes():
+    with app.app_context():
+        routes_list = [str(rule) for rule in app.url_map.iter_rules()]
+    return dump_json(routes_list)
 
 @app.route("/api/get_inventory", methods=["GET"])
 def get_inventory():
