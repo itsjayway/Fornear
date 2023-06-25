@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/jibranabsarulislam/Fornear/static/css/main.a6e45696.css",
+    "main.js": "/jibranabsarulislam/Fornear/static/js/main.4ce6163e.js",
+    "index.html": "/jibranabsarulislam/Fornear/index.html",
+    "main.a6e45696.css.map": "/jibranabsarulislam/Fornear/static/css/main.a6e45696.css.map",
+    "main.4ce6163e.js.map": "/jibranabsarulislam/Fornear/static/js/main.4ce6163e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a6e45696.css",
+    "static/js/main.4ce6163e.js"
+  ]
+}
