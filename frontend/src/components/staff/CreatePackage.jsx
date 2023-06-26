@@ -118,7 +118,7 @@ export default function CreatePackage({ refresh, onRefresh }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (formData.packageName === '' || formData.author === '') {
-      alert('Please fill out all fields');
+      // alert('Please fill out all fields');
       return;
     }
     const postData = {
@@ -134,14 +134,14 @@ export default function CreatePackage({ refresh, onRefresh }) {
         },
         body: JSON.stringify(postData),
       });
-      alert('Package created successfully!');
+      // alert('Package created successfully!');
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
   return (
-    <div className="flex flex-col w-[fit-content] px-10 border border-black rounded-md gap-x-10 items-center justify-center">
+    <div className="flex flex-col w-[fit-content] px-10 border border-black rounded-md gap-x-10 items-center justify-center bg-gray-100">
       <h1 className="text-3xl font-bold">Package Creator</h1>
       <div>
         <Input label="Package Name">

@@ -159,7 +159,7 @@ export default function Update({ refresh, onRefresh }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (formData.packageName === '' || formData.author === '') {
-      alert('Please fill out all fields');
+      // alert('Please fill out all fields');
       return;
     }
     const postData = {
@@ -175,17 +175,17 @@ export default function Update({ refresh, onRefresh }) {
         },
         body: JSON.stringify(postData),
       });
-      console.log(postData);
+      // console.log(postData);
       onRefresh();
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
   return (
     <>
       <h1 className="text-3xl font-bold">Update Tool</h1>
-      <div className="flex flex-row w-[fit-content] h-[40rem] px-10 border border-black rounded-md gap-x-10 items-center justify-center">
+      <div className="flex flex-row w-[fit-content] h-[40rem] px-10 border border-black rounded-md gap-x-10 items-center justify-center bg-gray-100">
         <div>
           <Input label="Auditor">
             <input
